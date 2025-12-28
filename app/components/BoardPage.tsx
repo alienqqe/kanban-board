@@ -145,7 +145,9 @@ export default function BoardPage({ params }: { params: { id: string } }) {
             name={col as TaskStatus}
             tasks={items}
             findColumnAtPoint={findColumnAtPoint}
-            ref={(el) => (columnRefs.current[col as TaskStatus] = el)}
+            ref={(el) => {
+              columnRefs.current[col as TaskStatus] = el
+            }}
             onDropTask={moveTask}
             onDeleteTask={onDeleteTask}
           />

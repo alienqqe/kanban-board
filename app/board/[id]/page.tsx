@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation'
 import React from 'react'
 
 const Page = () => {
-  const params = useParams()
+  const params = useParams<{ id: string }>()
 
   return <BoardPage params={params} />
 }

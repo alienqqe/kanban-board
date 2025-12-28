@@ -12,7 +12,7 @@ const tasksRoutes = require('./routes/tasksRoutes')
 const app = express()
 
 const corsOptions = {
-  origin: ['http://localhost:3000'],
+  origin: ['http://localhost:3000, https://kanban-board-228.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   credentials: true,
 }

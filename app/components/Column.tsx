@@ -34,7 +34,7 @@ const Column = forwardRef<HTMLDivElement, ColumnProps>(
 
     // Create node refs for each task id (avoids touching ref.current during render)
     const nodeRefs = useMemo(() => {
-      const refs: Record<string, React.RefObject<HTMLDivElement>> = {}
+      const refs: Record<string, React.RefObject<HTMLDivElement | null>> = {}
       tasks.forEach((t) => {
         refs[t.id] = React.createRef<HTMLDivElement>()
       })
