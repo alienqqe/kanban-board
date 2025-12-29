@@ -1,14 +1,7 @@
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
+'use client'
 
 import HomeShell from './components/HomeShell'
 
-export default async function Home() {
-  const accessToken = (await cookies()).get('accessToken')
-
-  if (!accessToken) {
-    redirect('/login')
-  }
-
+export default function Home() {
   return <HomeShell />
 }
